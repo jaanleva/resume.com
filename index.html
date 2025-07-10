@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Advanced Resume Builder</h1>
+    <div class="form-preview">
+      <form id="resumeForm" enctype="multipart/form-data">
+        <h2>Personal Info</h2>
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="phone" placeholder="Phone" required />
+        <textarea id="summary" placeholder="Summary/About You"></textarea>
+
+        <h2>Education</h2>
+        <textarea id="education" placeholder="Education Details (Degree, College, Year)"></textarea>
+
+        <h2>Experience</h2>
+        <textarea id="experience" placeholder="Experience Details (Company, Role, Duration)"></textarea>
+
+        <h2>Skills</h2>
+        <input type="text" id="skills" placeholder="e.g. HTML, CSS, JS" />
+
+        <h2>Upload Profile Photo</h2>
+        <input type="file" id="photoInput" accept="image/*" />
+
+        <h2>Upload Resume or Certificates (PDF/DOC)</h2>
+        <input type="file" id="docInput" accept=".pdf,.doc,.docx" />
+
+        <button type="submit">Build Resume</button>
+      </form>
+
+      <div class="resume" id="resumePreview">
+        <img id="profileImage" src="" alt="Profile Photo" />
+        <h2 id="rName">Your Name</h2>
+        <p><strong>Email:</strong> <span id="rEmail">example@mail.com</span></p>
+        <p><strong>Phone:</strong> <span id="rPhone">1234567890</span></p>
+        <h3>Summary</h3>
+        <p id="rSummary">Short summary goes here...</p>
+        <h3>Education</h3>
+        <p id="rEducation">Your education details</p>
+        <h3>Experience</h3>
+        <p id="rExperience">Your experience details</p>
+        <h3>Skills</h3>
+        <p id="rSkills">HTML, CSS, JS</p>
+        <h3>Uploaded Document</h3>
+        <a id="docLink" href="#" target="_blank">View Document</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
